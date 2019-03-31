@@ -1,0 +1,224 @@
+<world title="Stargazer I" seed="1">
+<gen>
+	<opt key="sphere" value="no" />
+</gen>
+
+<stars>
+<s id="1" name="Siaril" altname="Beacon of Light" />
+<s id="2" name="Lialiss" />
+<s id="3" name="Ennor" altname="King" />
+<s id="4" name="Admiral" />
+<s id="5" name="Blood Star" />
+<s id="6" name="Alamar" />
+<s id="7" name="Eomir" />
+<s id="8" name="Cardinal" />
+<s id="9" name="Enlarien" />
+<s id="11" name="Essir" />
+<s id="12" name="Engineer" />
+<s id="13" name="Tempest" />
+<s id="14" name="Enia" altname="Queen" />
+<s id="16" name="Salfiris" />
+<s id="21" name="Romeo" />
+<s id="25" name="Beholder" />
+<s id="28" name="Cassandra" />
+</stars>
+
+<constellations>
+
+<con name="Paladin" an="12:50" dn="-15" labelstars="13">
+	<border as="13:10" ds="-1">
+		-0:24 -8 -0:14 -1 -0:10 -16 +0:27 -3 +0:32 +11 +0:19 +11
+	</border>
+	<lines>
+		9 106 128 19 42 143 9; 19 268 113 204 80 143; 9 304; 80 49; 113 505
+	</lines>
+</con>
+
+<con name="Sword" minor="yes" an="13:22" dn="+1.5" labelstars="4">
+	<border as="13:36" ds="+6">-0:26 -13</border>
+	<lines>302 168 823 505</lines>
+</con>
+
+<con name="Shield" minor="yes" an="12:20" dn="-6" labelstars="6">
+	<border as="12:46" ds="-1">-0:37 -9 +0:23 +1</border>
+	<lines>49 792 239 570 323 49</lines>
+</con>
+
+<con name="Unicorn" an="11:10" dn="+5" labelstars="25">
+	<border as="12:42" ds="+7">
+		-0:09 +5 -1:03 -1 -0:30 +1.5 -1:30 -11.5 +0:40 -11 +1:59 +9
+	</border>
+	<lines>
+		597 107 586;
+		125 107 76 359 56 421 71 510; 56 233 197 170 185 585; 233 157 382;
+		233 659 548 549 359; 548 565 813 131; 549 756 601 412
+	</lines>
+</con>
+
+<con name="Lesser Unicorn" minor="yes" an="13:00" dn="+16" labelstars="5">
+	<border as="13:58" ds="+25">-0:48 -3 -1:00 -10 +0:23 -5 +0:09 -8 +0:28 +7 +0:26 +1.5</border>
+	<lines>186 203 1034 1377 1014; 1380 434 408 186 1308 1019 491 1806; 491 1864; 408 1034</lines>
+</con>
+
+<con name="Behemoth" an="14:50" dn="+13" labelstars="10">
+	<lines>
+		140 135 151 256 240 474 140 634 256; 135 885; 135 624; 135 644 401;
+		474 599 484; 140 903 798 602
+	</lines>
+</con>
+
+<con name="Lair" minor="yes" an="14:05" dn="+1" labelstars="4">
+	<border as="14:45" ds="0">-0:10 +3 -0:05 +3 -0:10 +1.5 -0:44 -14.5 +0:04 -5 +0:20 -2</border>
+	<lines>1464 1039 596 784 754 1398</lines>
+</con>
+
+<con name="Moor" minor="yes" an="13:00" dn="+30" labelstars="1">
+	<border as="13:58" ds="+39">-1:13 -2 -0:25 -11 -0:10 -4 +1:00 +3</border>
+</con>
+
+<con name="Dagger" minor="yes" an="13:45" dn="+42" labelstars="3">
+	<lines>295 438 81 1401 1562 438</lines>
+</con>
+
+<con name="Stonehenge" an="12:35" dn="+48" labelstars="7">
+	<lines>
+		86 247 417 190 315 968 544 86 1600 1662 1044 1653 86
+	</lines>
+</con>
+
+<con name="Wreath" minor="yes" an="13:35" dn="+56" labelstars="2">
+	<lines>2685 1479 82 2389 1259 955</lines>
+</con>
+
+<con name="Dragon" an="11:00" dn="+76" labelstars="12">
+	<lines>
+		50 63 626 50 260 37 87 267 420; 218 255 37 392 16
+	</lines>
+</con>
+
+<con name="Rune" an="17:25" dn="+26" labelstars="5">
+	<lines>
+		13 166 74 162; 74 651
+	</lines>
+</con>
+
+<con name="Wizard" an="17:15" dn="+12" labelstars="10">
+	<lines>
+		330 922 384 330 316 523 101 137 523 13;
+		137 279 229
+	</lines>
+</con>
+
+<con name="Warlock" minor="yes" an="14:35" dn="+37" labelstars="2">
+	<lines>351 1130 667 356 1322 1585 1287 1352 351 1887 1780 1133 1287</lines>
+</con>
+
+<con name="Imp" minor="yes" an="16:10" dn="+36" labelstars="3">
+	<lines>2527 130 1404 1326 1674; 1404 1005 1721; 749 1721 971 1279 1376; 1279 1957 766</lines>
+</con>
+
+<con name="Stork" minor="yes" an="15:20" dn="+54" labelstars="3">
+	<lines>1027 1768 1655 88 1105 937; 88 1258 1291 1162 1605 1105; 88 1770</lines>
+</con>
+
+<con name="Druid" minor="yes" an="16:20" dn="+67" labelstars="3">
+	<lines>722 1690 121 1016 1159 1420 1419; 121 1356 1159</lines>
+</con>
+
+<con name="Cartographer" an="0:50" dn="+78" labelstars="7">
+	<lines>
+		796 465 164 1013 897 520 540 647;
+		465 1211 575 1391 520
+	</lines>
+</con>
+
+<con name="Compass" minor="yes" an="23:00" dn="+88" labelstars="3">
+	<border pole="N" as="13:00" ds="+81">+8:00 +3 +8:00 +0 +8:00 -3</border>
+	<lines>493 884 1572 493</lines>
+</con>
+
+<con name="Polar Fox" an="21:30" dn="+58" labelstars="12">
+	<lines>
+		153 109 23 623 275 27; 23 578 527 623; 578 804; 527 1106
+	</lines>
+</con>
+
+<con name="Groom" an="14:00" dn="-26" labelstars="10">
+	<lines>
+		269 461 514 301 193 257 98; 21 301 337 450 193
+	</lines>
+</con>
+
+<con name="Bride" an="14:50" dn="-36" labelstars="10">
+	<lines>
+		53 541 498 84 280 209 274 96 84 98
+	</lines>
+</con>
+
+<con name="Cat" minor="yes" an="14:05" dn="-39" labelstars="5">
+	<lines>367 397 1280 1354 492 117 119; 492 57; 492 1236 656 748; 1280 656 1217 1012</lines>
+</con>
+
+<con name="Huntress" an="11:20" dn="+22" labelstars="10">
+	<border as="12:20" ds="+32">
+		-0:35 +2 -0:55 -13 -0:20 -3 -0:23 -5.5 +0:53 -1.5 +0:30 +1 +0:40 +14
+	</border>
+	<lines>
+		704 1831 1848 199 554 220 320 196 545 592 554; 592 633
+	</lines>
+</con>
+
+<con name="Javelin" minor="yes" an="11:50" dn="+36" labelstars="2">
+	<border as="12:20" ds="+37">-0:20 +1.5 -0:20 +1.5 -0:30 -6 +0:35 -2</border>
+	<lines>1610 479 704</lines>
+</con>
+
+<con name="Raven" minor="yes" an="10:30" dn="+51" labelstars="4">
+	<lines>1946 1491 1371 1120 768 1092 1120; 802 938 1371 1652</lines>
+</con>
+
+<con name="Book" minor="yes" an="10:25" dn="+26" labelstars="6">
+	<border as="10:50" ds="+30">-0:37 -2 -0:08 -2 -0:10 -8 +0:35 +3</border>
+	<lines>28 41 390 462 28; 28 241 908 41</lines>
+</con>
+
+<con name="Flower" an="10:00" dn="+31" labelstars="3">
+	<border as="10:50" ds="+34">
+		-0:25 +8.5 -0:55 -13 +0:08 -3.5 +0:27 +2 +0:08 +2
+	</border>
+	<lines>
+		2 473 1131; 2 591; 2 590 776 428 2; 428 1331 1038; 1331 847 2;
+		473 1097 2; 1097 1570 847; 2 1185; 591 1048 590
+	</lines>
+</con>
+
+<con name="Poet" an="9:15" dn="+24" labelstars="10">
+	<lines>
+		59 641 238 399 90 158 118 335 399; 158 386 158 613 118 803
+	</lines>
+</con>
+
+<con name="Ogre" an="23:30" dn="+40" labelstars="7">
+	<border as="0:30" ds="+55">
+		-2:30 -13 +0:50 -14 -0:10 -8 +0:55 -3 +0:20 +15 +0:35
+	</border>
+	<lines>
+		68 138 54 93 721; 54 231 122 155 138;
+		231 361 92; 122 219; 155 676 660
+	</lines>
+</con>
+
+<con name="Club" minor="yes" an="22:20" dn="+32" labelstars="5">
+	<lines>534 264 660 1257 1030 534</lines>
+</con>
+
+<con name="Skyship" an="1:45" dn="+14" labelstars="15">
+	<lines>
+		12 39 4 38 60 70 221 61 83; 38 429 150 60 83 104 22 622;
+		104 12 43 680 89 39; 43 22
+	</lines>
+</con>
+
+</constellations>
+
+</world>

@@ -1,0 +1,84 @@
+text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	text-anchor: middle;
+	fill: #000;
+	stroke: #fff;
+	stroke-width: 2;
+	paint-order:stroke
+}
+
+g#grid line {
+	stroke-width: 0.5
+}
+g#grid circle {
+	fill: none;
+	stroke-width: 0.5
+}
+#bg {
+	fill: #fff;
+	stroke: none;
+}
+#frame {
+	fill: none;
+	stroke: #000;
+	stroke-width:1.5;
+}
+.g0 {
+	stroke: #ddd
+}
+.gd {
+	stroke:#aaa
+}
+.g {
+	stroke:#ddd
+}
+.geq {
+	stroke:#555
+}
+
+g#stars circle {
+	fill: #000;
+	stroke: #fff;
+	stroke-width: 2;
+	paint-order: stroke
+}
+g#stars text {
+	fill: #07f;
+}
+text.t1 {
+	font-size: 10px
+}
+text.t2 {
+	font-size: 15px
+}
+text.t3 {
+	font-size: 20px
+}
+
+g#lines line {
+	stroke:#07f;
+}
+g#lines line.l1 {
+	stroke-width:0.5;
+}
+g#lines line.l2 {
+	stroke-width:1.0;
+}
+g#lines line.l3 {
+	stroke-width:1.5;
+}
+
+g#borders {
+	fill: none;
+	stroke: #000;
+	stroke-width: 1.0;
+	stroke-dasharray: 1, 4;
+}
+
+g#names text.s{
+	font-weight: bold;
+}
+g#names text.c{
+	font-style: italic;
+}

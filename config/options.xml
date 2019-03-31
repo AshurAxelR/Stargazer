@@ -1,0 +1,34 @@
+<stargazer>
+
+<options>
+	<opt key="screenshotPath" val="screenshots" />
+	<opt key="exposure" val="0.85" />
+	<opt key="contrast" val="0.8" />
+	<opt key="circle" val="12" />
+	<opt key="startLatitudeMin" val="20" />
+	<opt key="startLatitudeMax" val="70" />
+</options>
+
+<chartOptions>
+	<opt key="margin" val="40" />
+	<opt key="starLabelGap" val="3" />
+</chartOptions>
+
+<worlds>
+
+	<world info="worlds/stargazer_i/info.xml" />
+	
+	<world title="Stargazer II" seed="2">
+		<gen>
+			<opt key="numStars" val="1000000" />
+			<opt key="distributionSigma" val="0.05" />
+			<opt key="distributionOffset" val="0.6" />
+			<opt key="brightnessLambda" val="8.0" />
+			<opt key="brightnessOffset" val="0.05" />
+			<opt key="sphere" val="yes" />
+		</gen>
+	</world>
+	
+</worlds>
+
+</stargazer>
