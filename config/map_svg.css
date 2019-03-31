@@ -8,13 +8,6 @@ text {
 	paint-order:stroke
 }
 
-g#grid line {
-	stroke-width: 0.5
-}
-g#grid circle {
-	fill: none;
-	stroke-width: 0.5
-}
 #bg {
 	fill: #fff;
 	stroke: none;
@@ -24,16 +17,25 @@ g#grid circle {
 	stroke: #000;
 	stroke-width:1.5;
 }
+
 .g0 {
+	fill: none;
+	stroke-width: 0.5;
 	stroke: #ddd
 }
 .gd {
+	fill: none;
+	stroke-width: 0.5;
 	stroke:#aaa
 }
 .g {
+	fill: none;
+	stroke-width: 0.5;
 	stroke:#ddd
 }
 .geq {
+	fill: none;
+	stroke-width: 0.5;
 	stroke:#555
 }
 
