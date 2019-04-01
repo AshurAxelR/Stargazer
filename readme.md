@@ -4,19 +4,19 @@
 
 ### Usage
 
-* [3D view mode](#3d-view-mode):
+[3D view mode](#3d-view-mode):
 
-  ```
+```
 java -jar stargazer.jar
-  ```
+```
 
-* [Chart mode](#chart-mode):
+[Chart mode](#chart-mode):
 
-  ```
+```
 java -jar stargazer.jar -C chart_mode_options
-  ```
+```
 
-  _Note:_ `-C` option must go first to enable chart mode.
+_Note:_ `-C` option must go first to enable chart mode.
 
 ### Example world
 
