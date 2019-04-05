@@ -39,7 +39,7 @@ _Note:_ `-C` option must go first to enable chart mode.
 | key | action |
 | :---: | :--- |
 | **TAB** | Toggle between map and realistic modes. |
-| **&#x0060;** | Save screenshot as map mode to `screenshots` folder (can be changed in options). |
+| **\`** | Save screenshot as map mode to `screenshots` folder (can be changed in options). |
 | **[** | Previous world. |
 | **]** | Next world. |
 | **BKSP** | Reset current world time and location. |
@@ -70,16 +70,16 @@ All options are case-sensitive.
 | key | action |
 | :--- | :--- |
 | **-C** | _Required, must go first._ Enables chart mode. |
-| **-in** filename | _Required._ World info XML file. |
-| **-mag** float | Optional. Only include stars brighter than this apparent magnitude. Default is +5.0. |
-| **-out** directory | Optional. Path to output files. Defalult is current folder. |
-| **-stars** int | Optional. Creates `stars.html` file with the list of N brightest stars. |
+| **-in**&nbsp;filename | _Required._ World info XML file. |
+| **-mag**&nbsp;float | Optional. Only include stars brighter than this apparent magnitude. Default is +5.0. |
+| **-out**&nbsp;directory | Optional. Path to output files. Defalult is current folder. |
+| **-stars**&nbsp;int | Optional. Creates `stars.html` file with the list of N brightest stars. |
 | **-nhemi** | Optional. Render Northern hemisphere projection map as `map_nhemi.svg`. |
 | **-shemi** | Optional. Render Southern hemisphere projection map as `map_shemi.svg`. |
 | **-cylinder** | Optional. Render cylindrical projection map as `map_cylinder.svg`. |
 | **-maps** | Optional. Render all map files (same as `-nhemi -shemi -cylinder`). |
 | **-dev** | Optional. Render maps in development mode. |
-| **-idmag** float | Optional. In development mode, only show IDs for stars brighter than this apparent magnitude. Default is +4.4. |
+| **-idmag**&nbsp;float | Optional. In development mode, only show IDs for stars brighter than this apparent magnitude. Default is +4.4. |
 
 At least one output option (`-stars`, `-maps`, `-nhemi`, `-shemi`, or `-cylinder`) is required.
 
