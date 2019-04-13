@@ -39,7 +39,7 @@ _Note:_ `-C` option must go first to enable chart mode.
 | key | action |
 | :---: | :--- |
 | **TAB** | Toggle between map and realistic modes. |
-| **\`** | Save screenshot as map mode to `screenshots` folder (can be changed in options). |
+| **&grave;** | Save screenshot as map mode to `screenshots` folder (can be changed in options). |
 | **[** | Previous world. |
 | **]** | Next world. |
 | **BKSP** | Reset current world time and location. |
@@ -60,6 +60,7 @@ _Note:_ `-C` option must go first to enable chart mode.
 | **F11** | Toggle between windowed and borderless fullscreen modes. |
 | **F12** | Save screenshot as is in the application root folder. |
 
+Additional options can be defined in `config/options.xml` (see [Config XML Format](optionsxml.md)).
 
 ## Chart Mode
 
@@ -67,10 +68,10 @@ _Note:_ `-C` option must go first to enable chart mode.
 
 All options are case-sensitive.
 
-| key | action |
+| option | description |
 | :--- | :--- |
 | **-C** | _Required, must go first._ Enables chart mode. |
-| **-in**&nbsp;filename | _Required._ World info XML file. |
+| **-in**&nbsp;filename | _Required._ [World info](worldinfoxml.md) XML file. |
 | **-mag**&nbsp;float | Optional. Only include stars brighter than this apparent magnitude. Default is +5.0. |
 | **-out**&nbsp;directory | Optional. Path to output files. Defalult is current folder. |
 | **-stars**&nbsp;int | Optional. Creates `stars.html` file with the list of N brightest stars. |
@@ -83,7 +84,11 @@ All options are case-sensitive.
 
 At least one output option (`-stars`, `-maps`, `-nhemi`, `-shemi`, or `-cylinder`) is required.
 
+Additional options can be defined in `config/options.xml` (see [Config XML Format](optionsxml.md)).
+`config/stars_template.html` contains the template for `stars.html`.
+`config/map_svg.css` contains the stylesheet for map SVGs.
+
 ## Advanced Configuration
 
-* Editing Config XML - _TODO_
-* Creating Your Worlds - _TODO_
+* [Editing Config XML](optionsxml.md)
+* [Creating Your Worlds](worldinfoxml.md)
