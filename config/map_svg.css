@@ -25,17 +25,17 @@ text {
 }
 .gd {
 	fill: none;
-	stroke-width: 0.5;
-	stroke:#aaa
+	stroke-width: 1.0;
+	stroke:#ccc
 }
 .g {
 	fill: none;
 	stroke-width: 0.5;
-	stroke:#ddd
+	stroke:#ccc
 }
 .geq {
 	fill: none;
-	stroke-width: 0.5;
+	stroke-width: 1.0;
 	stroke:#555
 }
 
