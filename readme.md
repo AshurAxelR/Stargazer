@@ -2,6 +2,10 @@
 
 > _Other worlds Astronomy._
 
+### Download
+
+[stargazer-1.0.0.zip](https://github.com/ashurrafiev/Stargazer/releases/download/1.0.0/stargazer-1.0.0.zip) (3.08 MB)
+
 ### Usage
 
 [3D view mode](#3d-view-mode):
@@ -87,6 +91,12 @@ At least one output option (`-stars`, `-maps`, `-nhemi`, `-shemi`, or `-cylinder
 Additional options can be defined in `config/options.xml` (see [Config XML Format](optionsxml.md)).
 `config/stars_template.html` contains the template for `stars.html`.
 `config/map_svg.css` contains the stylesheet for map SVGs.
+
+_Example:_  
+This will generate maps for [Stargazer I](worlds/stargazer_i/info.xml):
+```
+java -jar stargazer.jar -C -in worlds/stargazer_i/info.xml -out worlds/stargazer_i -maps
+```
 
 ## Advanced Configuration
 

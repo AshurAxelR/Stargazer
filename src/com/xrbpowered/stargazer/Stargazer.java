@@ -3,6 +3,7 @@ package com.xrbpowered.stargazer;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics2D;
+import java.io.File;
 import java.util.ArrayList;
 
 import org.lwjgl.input.Keyboard;
@@ -27,6 +28,8 @@ import com.xrbpowered.utils.assets.CPAssetManager;
 
 public class Stargazer extends ExampleClient {
 
+	public static final String version = "1.0.0";
+	
 	public static String configPath = "config/options.xml";
 	public static String screenshotPath = "screenshots";
 	
@@ -42,7 +45,7 @@ public class Stargazer extends ExampleClient {
 	private static World world = new World("Stargazer I", 1L);
 
 	private boolean mouseLook = true;
-	private Font titleFont = new Font("Palatino Linotype", Font.PLAIN, 44); // TODO cross-platform font or embed?
+	private Font titleFont =  new Font("Times New Roman", Font.PLAIN, 44);
 	private Font infoFont = titleFont.deriveFont(24f);
 	private UIPane bottomInfoPane;
 	
@@ -128,6 +131,9 @@ public class Stargazer extends ExampleClient {
 	public void screenshotMap() {
 		boolean mapMode = MapGrid.mapMode; 
 		setMapMode(true);
+		File path = new File(screenshotPath);
+		if(!path.isDirectory())
+			path.mkdirs();
 		new Screenshot(this).save(screenshotPath);
 		setMapMode(mapMode);
 	}
@@ -280,6 +286,8 @@ public class Stargazer extends ExampleClient {
 	}
 	
 	public static void main(String[] args) {
+		System.out.println("Stargazer: version "+version);
+		
 		if(args.length>0 && args[0].equals("-C")) {
 			StarChart.main(args);
 			return;
