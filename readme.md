@@ -4,7 +4,7 @@
 
 ### Download
 
-[stargazer-1.0.0.zip](https://github.com/ashurrafiev/Stargazer/releases/download/1.0.0/stargazer-1.0.0.zip) (3.08 MB)
+[stargazer-1.0.0.zip](https://github.com/AshurAxelR/Stargazer/releases/download/1.0.0/stargazer-1.0.0.zip) (3.08 MB)
 
 ### Usage
 
@@ -24,7 +24,7 @@ _Note:_ `-C` option must go first to enable chart mode.
 
 ### Example world
 
-[Stargazer I](https://ashurrafiev.github.io/Stargazer/worlds/stargazer_i/stars.html) (work in progress).
+[Stargazer I](https://AshurAxelR.github.io/Stargazer/worlds/stargazer_i/stars.html) (work in progress).
 
 
 
