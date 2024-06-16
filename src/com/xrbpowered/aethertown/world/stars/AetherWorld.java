@@ -19,8 +19,6 @@ public class AetherWorld extends World {
 			case "legacyRandom":
 				legacyRandom = XmlReader.toBool(value, legacyRandom);
 				break;
-			default:
-				super.setOption(key, value);
 		}
 	}
 	

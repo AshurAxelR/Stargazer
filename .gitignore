@@ -1,6 +1,7 @@
 /lib/
 /stargazer/
 /screenshots/*
+/worlds/
 dev_*.svg
 
 # Compiled class file
