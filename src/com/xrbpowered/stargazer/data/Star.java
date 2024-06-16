@@ -26,6 +26,14 @@ public class Star implements Comparable<Star> {
 	
 	public Star() {
 	}
+
+	public Star(double asc, double decl, double mag, double temp) {
+		this.asc = asc * 12.0 / Math.PI;
+		this.decl = decl * 180.0 / Math.PI;
+		this.mag = mag;
+		this.temp = temp;
+		this.r = calcr(magToRf(mag));
+	}
 	
 	public Star(double mag, float[] data, int offs) {
 		this.mag = mag;
@@ -36,9 +44,7 @@ public class Star implements Comparable<Star> {
 		this.asc = Math.atan2(v.z, v.y) * 12.0 / Math.PI + 12.0;
 		this.decl = 90.0 - Math.acos(Vector3f.dot(v, new Vector3f(1, 0, 0))) * 180.0 / Math.PI;
 		
-		double rf = data[offs+3];
-		rf = StarChart.circleScale * rf * rf;
-		this.r = rf / Math.sqrt(Math.PI);
+		this.r = calcr(data[offs+3]);
 	}
 	
 	@Override
@@ -49,9 +55,17 @@ public class Star implements Comparable<Star> {
 	public int magLevel() {
 		return mag<=3.0 ? 3 : mag<=3.85 ? 2 : 1;
 	}
+
+	private static double calcr(double rf) {
+		return (StarChart.circleScale * rf * rf) / Math.sqrt(Math.PI);
+	}
 	
 	public static double apMag(double rf) {
 		return 7.0-Math.pow(rf, 1.5)*3.4;
+	}
+	
+	public static double magToRf(double mag) {
+		return Math.pow((7.0 - mag) / 3.4, 2.0/3.0);
 	}
 
 }

@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import org.w3c.dom.Element;
 
 import com.xrbpowered.stargazer.BlackBodySpectrum;
-import com.xrbpowered.stargazer.StarField;
 import com.xrbpowered.stargazer.Stargazer;
 import com.xrbpowered.stargazer.data.Constellation;
 import com.xrbpowered.stargazer.data.OptionParser;
@@ -47,18 +46,11 @@ public class StarChart {
 
 	public final World world;
 	
-	public final ArrayList<Star> stars = new ArrayList<>();
+	public ArrayList<Star> stars;
 	
 	public StarChart(World world, double minMag) {
 		this.world = world;
-		
-		float[] data = world.createStarData();
-		for(int offs=0; offs<data.length; offs+=StarField.SKIP) {
-			double mag = Star.apMag(data[offs+3]);
-			if(mag<minMag) {
-				stars.add(new Star(mag, data, offs));
-			}
-		}
+		stars = world.listStars(minMag);
 		stars.sort(null);
 		int rank = 1;
 		for(Star s : stars) {

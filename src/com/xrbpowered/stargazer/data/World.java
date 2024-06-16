@@ -1,5 +1,6 @@
 package com.xrbpowered.stargazer.data;
 
+import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
@@ -110,6 +111,18 @@ public class World implements OptionParser {
 		return starData;
 	}
 	
+	public ArrayList<Star> listStars(double minMag) {
+		float[] data = createStarData();
+		ArrayList<Star> stars = new ArrayList<>();
+		for(int offs=0; offs<data.length; offs+=StarField.SKIP) {
+			double mag = Star.apMag(data[offs+3]);
+			if(mag<minMag) {
+				stars.add(new Star(mag, data, offs));
+			}
+		}
+		return stars;
+	}
+	
 	public Constellation findConstellation(double a, double d) {
 		for(Constellation con : constellations)
 			if(con.isInside(a, d))
@@ -139,8 +152,18 @@ public class World implements OptionParser {
 		try {
 			if(root==null)
 				return null;
+			
+			Class<?> cls = World.class;
+			if(root.hasAttribute("class")) {
+				String clsName = root.getAttribute("class");
+				cls = ClassLoader.getSystemClassLoader().loadClass(clsName);
+				if(!World.class.isAssignableFrom(cls))
+					throw new InvalidParameterException(clsName + " is not a World class");
+			}
 			if(world==null)
-				world = new World();
+				world = (World) cls.newInstance();
+			else if(!cls.isInstance(world))
+				throw new InvalidParameterException("World class mismatch");
 			
 			if(root.hasAttribute("seed")) {
 				String seed = XmlReader.attr(root, "seed", "");
