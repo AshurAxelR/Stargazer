@@ -92,7 +92,10 @@ public class StarField {
 	}
 	
 	public void update(float dt) {
-		timeOfDay += Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) ? 0.02f*dt : 0.001f*dt;
+		if(Keyboard.isKeyDown(Keyboard.KEY_LCONTROL))
+			timeOfDay -= 0.02f*dt;
+		else
+			timeOfDay += Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) ? 0.02f*dt : 0.001f*dt;
 		Matrix4f m = dailyCycleMatrix;
 		Matrix4f.setIdentity(m);
 		dailyCycle.set(-timeOfDay, 0, Stargazer.observatory.latitudeRadians);

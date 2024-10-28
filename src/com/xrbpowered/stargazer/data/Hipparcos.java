@@ -24,7 +24,7 @@ public class Hipparcos extends World {
 	
 	@Override
 	public float[] createStarData() {
-		throw new UnsupportedOperationException();
+		return starsToData(load(dataPath, 8));
 	}
 
 	public static ArrayList<Star> load(String path, double minMag) {

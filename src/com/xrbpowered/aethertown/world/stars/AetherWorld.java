@@ -23,7 +23,7 @@ public class AetherWorld extends World {
 	}
 	
 	public float[] createStarData() {
-		throw new UnsupportedOperationException();
+		return starsToData(listStars(8));
 	}
 	
 	public ArrayList<Star> listStars(double minMag) {

@@ -123,6 +123,30 @@ public class World implements OptionParser {
 		return stars;
 	}
 	
+	protected float[] starsToData(ArrayList<Star> stars) {
+		numStars = stars.size();
+		float[] starData = new float [numStars*StarField.SKIP];
+		
+		double scale = 30.0;
+		int offs = 0;
+		for(int i=0; i<numStars; i++) {
+			Star star = stars.get(i);
+			double ra = Math.PI * star.asc / 12.0;
+			double de = Math.PI * star.decl / 180.0;
+			double r = scale*Math.cos(de);
+			float x = (float)(Math.sin(ra)*r);
+			float y = (float)(scale*Math.sin(de));
+			float z = (float)(Math.cos(ra)*r);
+			starData[offs++] = y;
+			starData[offs++] = -x;
+			starData[offs++] = z;
+			starData[offs++] = (float) Star.magToRf(star.mag);
+			starData[offs++] = (float) star.temp;
+		}
+		
+		return starData;
+	}
+	
 	public Constellation findConstellation(double a, double d) {
 		for(Constellation con : constellations)
 			if(con.isInside(a, d))
@@ -152,7 +176,10 @@ public class World implements OptionParser {
 		try {
 			if(root==null)
 				return null;
-			
+
+			if(recursive && root.hasAttribute("info"))
+				return load(world, root.getAttribute("info"), chartData);
+
 			Class<?> cls = World.class;
 			if(root.hasAttribute("class")) {
 				String clsName = root.getAttribute("class");
@@ -210,9 +237,6 @@ public class World implements OptionParser {
 					}
 				}
 			}
-
-			if(recursive && root.hasAttribute("info"))
-				world = load(world, root.getAttribute("info"), chartData);
 				
 			if(world.seed==null)
 				throw new RuntimeException("No world seed");
