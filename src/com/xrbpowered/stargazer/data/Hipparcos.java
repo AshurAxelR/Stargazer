@@ -7,12 +7,16 @@ import java.util.Scanner;
 
 public class Hipparcos extends World {
 
-	public String dataPath = "hip2.bin";
+	public String dataPath = "hip2.dat";
 	
 	public Hipparcos() {
 		seed = 0L;
 	}
-	
+
+	public Hipparcos(String dataPath) {
+		this.dataPath = dataPath;
+	}
+
 	@Override
 	public void setOption(String key, String value) {
 		switch(key) {

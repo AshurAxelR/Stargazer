@@ -16,6 +16,9 @@
 
 <worlds>
 
+	<world info="worlds/hipparcos/info.xml" />
+	<world info="worlds/aether/info.xml" />
+	
 	<world info="worlds/stargazer_i/info.xml" />
 	
 	<world title="Stargazer II" seed="2">

@@ -11,6 +11,8 @@ public class AetherStarData {
 	public static final float latitude = (float)Math.toRadians(45); // 0 - north pole, 180 - south pole
 
 	public static final int numStars = 100000;
+	public static final int improveNumStars = 42000;
+	public static final double improvedLambda = 1.115;
 	
 	public static final CompGauss magRand = new CompGauss(
 		-3, 15,
@@ -67,13 +69,29 @@ public class AetherStarData {
 			return x;
 		}
 	}
+	
+	public static double nextImprovedMag(Rand rand, boolean first) {
+		double mag;
+		if(first) {
+			do {
+				mag = -1.5 - Math.log(1.0 - rand.nextDouble()) / (-improvedLambda*9.5);
+			} while(mag < -4.0);
+		}
+		else {
+			do {
+				mag = 8.0 - Math.log(1.0 - rand.nextDouble()) / (-improvedLambda);
+			} while(mag < -4.0);
+		}
+		return mag;
+	}
 
-	public static ArrayList<Star> generate(Rand random, double minMag) {
+	public static ArrayList<Star> generate(Rand random, double minMag, boolean improved) {
 		ArrayList<Star> stars = new ArrayList<>();
-		for(int i=0; i<numStars; i++) {
+		int num = improved ? improveNumStars : numStars;
+		for(int i=0; i<num; i++) {
 			double ra = random.nextDouble()*2.0*Math.PI;
 			double de = Math.asin(2.0*random.nextDouble()-1.0);
-			double mag = magRand.next(random);
+			double mag = improved ? nextImprovedMag(random, i==0) : magRand.next(random);
 			double temp = Math.pow(10, tempRand.next(random));
 			if(mag<minMag) // minMag = 8
 				stars.add(new Star(ra, de, mag, temp));

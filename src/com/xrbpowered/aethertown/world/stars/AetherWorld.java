@@ -12,12 +12,26 @@ import com.xrbpowered.stargazer.data.XmlReader;
 public class AetherWorld extends World {
 
 	public boolean legacyRandom = false;
+	public boolean improved = false;
+	
+	public AetherWorld() {
+		seed = 0L;
+	}
+	
+	public AetherWorld(long seed, boolean legacy, boolean improved) {
+		this.seed = seed;
+		this.legacyRandom = legacy;
+		this.improved = improved;
+	}
 	
 	@Override
 	public void setOption(String key, String value) {
 		switch(key) {
 			case "legacyRandom":
 				legacyRandom = XmlReader.toBool(value, legacyRandom);
+				break;
+			case "improved":
+				improved = XmlReader.toBool(value, improved);
 				break;
 		}
 	}
@@ -28,6 +42,6 @@ public class AetherWorld extends World {
 	
 	public ArrayList<Star> listStars(double minMag) {
 		Rand rand = legacyRandom ? new LegacyRand(seed) : new MmixRand(seed);
-		return AetherStarData.generate(rand, minMag);
+		return AetherStarData.generate(rand, minMag, improved);
 	}
 }
