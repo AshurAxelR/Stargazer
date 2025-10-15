@@ -4,6 +4,7 @@ import java.awt.geom.Point2D;
 
 import org.lwjgl.util.vector.Vector3f;
 
+import com.xrbpowered.stargazer.BlackBodySpectrum;
 import com.xrbpowered.stargazer.charts.StarChart;
 
 public class Star implements Comparable<Star> {
@@ -54,6 +55,10 @@ public class Star implements Comparable<Star> {
 	
 	public int magLevel() {
 		return mag<=3.0 ? 3 : mag<=3.85 ? 2 : 1;
+	}
+	
+	public String spectralClass() {
+		return BlackBodySpectrum.getSpectralClass(temp);
 	}
 
 	private static double calcr(double rf) {

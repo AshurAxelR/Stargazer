@@ -10,7 +10,6 @@ import java.util.ArrayList;
 
 import org.w3c.dom.Element;
 
-import com.xrbpowered.stargazer.BlackBodySpectrum;
 import com.xrbpowered.stargazer.Stargazer;
 import com.xrbpowered.stargazer.data.Constellation;
 import com.xrbpowered.stargazer.data.OptionParser;
@@ -124,7 +123,7 @@ public class StarChart {
 			sb.append(String.format("<td style=\"text-align:right\">%dh&nbsp;%dm</td>", asc/60, asc%60));
 			sb.append(String.format("<td style=\"text-align:right\">%+.2f&deg;</td>", s.decl));
 			sb.append(String.format("<td style=\"text-align:right\">%.0f</td>", round(s.temp, 2)));
-			sb.append(String.format("<td style=\"text-align:center\">%s</td>\n", BlackBodySpectrum.getSpectralClass(s.temp)));
+			sb.append(String.format("<td style=\"text-align:center\">%s</td>\n", s.spectralClass()));
 			sb.append("</tr>\n\n");
 		}
 		sb.append("</tbody>\n</table>\n");
